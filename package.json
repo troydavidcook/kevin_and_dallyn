@@ -4,11 +4,30 @@
   "description": "A viewing of Kevin & Dallyn's proposal.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "author": "Troy David Cook",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
-  }
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.12.6",
+    "nodemon": "^1.12.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troydavidcook/kevin_and_dallyn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/troydavidcook/kevin_and_dallyn/issues"
+  },
+  "homepage": "https://github.com/troydavidcook/kevin_and_dallyn#readme"
 }
