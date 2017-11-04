@@ -1,15 +1,20 @@
+require('./config/config')
+
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
+const _ = require('lodash');
 
+var {mongoose} = ('.db/mongoose');
+var {User} = ('./models/user')
 
+const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, "public")));
 
