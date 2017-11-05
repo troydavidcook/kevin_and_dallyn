@@ -17,6 +17,7 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "hbs": "^4.0.1",
+    "knex": "^0.13.0",
     "mongo-session": "^0.2.15",
     "mongodb": "^2.2.33",
     "mongoose": "^4.12.6",
