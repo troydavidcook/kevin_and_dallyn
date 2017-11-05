@@ -1,38 +1,35 @@
-var mongoose = require ('mongoose');
-var validator = require ('validator');
+const bcrypt = require("bcrypt");
+
+const db = require("../config/database");
+
+const User = {}
 
 
-var User = mongoose.model('User', {
-  email: {
-    type: String,
-    required: true,
-    trim: true,
-    minlength: 1,
-    unique: true,
-    validate: {
-        validator: validator.isEmail,
-        message: '{VALUE} is not a valid email.'
-    },
-  },
+User.find = () => {
+  return db.manyOrNone(`
+    SELECT * FROM users;
+    `)
+}
 
-  password: {
-      type: String,
-      required: true,
-      minlength: 6
-  },
-  tokens: [{
-    access: {
-      type: String,
-      require: true
-    },
-    token: {
-      type: String,
-      require: true
-    },
-  }]
-});
+User.findByEmail = (email) => {
+  return db.oneOrNone(`
+      SELECT * FROM users
+      WHERE email = $1
+  `, email);
+}
 
+User.create = (user) => {
+  // User info is already created at this point, via the body
+  user.password = bcrypt.hashSync(user.password, 10);
+  
+  return db.one(`
+    INSERT INTO users
+    (email, password)
+    VALUES ($1, $2)
+    RETURNING *
+  `, [user.email, user.password]);
+}
 
 
 
-module.exports = {User};
+module.exports = User;

@@ -1,12 +1,9 @@
-require('./config/config');
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const _ = require('lodash');
-const {ObjectID} = require('mongodb');
+const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 
-var {mongoose} = require('.db/mongoose');
 var {User} = require('./models/user')
 
 const app = express();

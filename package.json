@@ -10,10 +10,12 @@
   "author": "Troy David Cook",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "connect-mongo": "^2.0.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "hbs": "^4.0.1",
     "mongo-session": "^0.2.15",
     "mongodb": "^2.2.33",
