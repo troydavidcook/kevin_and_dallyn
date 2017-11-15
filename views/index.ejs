@@ -1,62 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Kevin&Dallyn</title>
-    <link rel="stylesheet" href="../css/styles.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
-    <script src="../server/js/script.js"></script>
-
-  </head>
-  <body>
-    <div class="nav-bar">
-      <h2 class="site-names">Kevin & Dallyn | An Engagement</h2>
-      <div id="nav-btns">
-        <a href="#" id="login-btn">Log In |</a>
-        <a href="/">Home</a>
+    <title>Kevin&Dallyn</title>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand nav-title" href="/">Kevin & Dallyn | A Proposal</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 has-success">
+          <input class="form-control mr-sm-2" type="search" placeholder="Password" aria-label="Search">
+          <button class="btn btn-outline-success  btn-sm my-0 my-xs-0" type="submit">Log In</button>
+        </form>
       </div>
-     </div> 
-    <img id="header-underline"src="https://i.imgur.com/x2soJfd.png" alt="Congratulations!">
-    <div class="img-container">
-      <img class="engage-img" src="https://i.imgur.com/tTTiLVx.jpg" alt="Patiently Waiting.">
-      <img class="engage-img" src="https://i.imgur.com/srQPR9x.jpg" alt="Saying Hello">
-      <img class="engage-img" src="https://i.imgur.com/6rpY8bL.jpg" alt="Wondering what's up.">
-      <img class="engage-img" src="https://i.imgur.com/B9dl1QW.jpg" alt="Still wondering what's up.">
-      <img class="engage-img" src="https://i.imgur.com/0ukTSnE.jpg" alt="Omg, are you serious???.">
-      <img class="engage-img" src="https://i.imgur.com/XZRZt8Z.jpg" alt="Say, it fits!.">
-    </div>
-
-    <!-- Signing up Form -->
-    <div class="sign-up-form">
-      <form method="POST" action="/users/signup">
-        <div>
-          <input name="user[email]" type="email" placeholder="Email" class="form-design"/>
-        </div>
-        <div class="">
-          <input name="user[password]" type="password" placeholder="Password" class="form-design"/>
-        </div>
-        <div class="">
-          <button type="submit" class="user-buttons">Sign Up</button>
-        </div>
-
-        <!-- Logging In form -->
-        <div class="log-in-form">
-          <form method="POST" action="/users/login">
-            <div>
-              <input name="user[email]" type="email" placeholder="Email" class="form-control" />
-            </div>
-            <div class="">
-              <input name="user[password]" type="password" placeholder="Password" class="form-control" />
-            </div>
-              <button type="submit" class="search-button">Login</button>
-            </form>
-          </div>
-    </form>
-  <div>
-  </body>
+    </nav>
+</body>
 </html>

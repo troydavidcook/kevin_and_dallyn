@@ -1,5 +1,3 @@
-var env = process.env.NODE_ENV || 'development';
-console.log('Environment ---', env);
 
 const pgp = require("pg-promise")({});
 
