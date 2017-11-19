@@ -26,8 +26,12 @@ a {
     font-family: 'source Serif Pro', serif;
 }
 
+.left-link {
+    margin-left: 12px;
+    margin-top: 3px;
+}
+
 .images {
-    display: block;
     box-shadow: 2px 2px 5px #506C0D;
     max-width: 50%;
     max-height: 550px;
@@ -39,4 +43,9 @@ a {
     font-weight: lighter;
     margin-left: 30px;
     display: inline;
+}
+
+.fa {
+    margin-top: 13px;
+    margin-left: 14px;
 }

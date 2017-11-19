@@ -75,6 +75,10 @@ app.get('/engagement', (req, res) => {
     res.render('engagement');
 });
 
+app.get('/bts', (req, res) => {
+  res.render('bts');
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
